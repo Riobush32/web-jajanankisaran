@@ -1,4 +1,4 @@
-<div class="w-1/2" x-data="{mainImage:'https://flowbite.s3.amazonaws.com/docs/gallery/featured/image.jpg'}">
+<div class="w-full md:w-1/2 " x-data="{mainImage:'https://flowbite.s3.amazonaws.com/docs/gallery/featured/image.jpg'}">
     <div>
         <img class="max-w-full rounded-lg" :src="mainImage" alt="">
     </div>

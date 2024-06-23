@@ -1,7 +1,8 @@
-<div class="w-1/2">
-    <div class="w-full  ">
+<div class="w-full md:w-1/2">
+    <div class="w-full " x-data="{showAbout:true, showServices:false}">
         <div class="p-5">
-            <h2 class="text-xl font-extrabold dark:text-white">Ellipsesinc - Kaos Oversize Pria Wanita NY - Putih</h2>
+            <h3 class="md:hidden text-xl font-bold dark:text-white my-2">Rp20.000,00</h3>
+            <h2 class="text-lg md:text-xl font-bold md:font-extrabold dark:text-white">Ellipsesinc - Kaos Oversize Pria Wanita NY - Putih</h2>
             <div class="my-2 flex items-center space-x-1 rtl:space-x-reverse">
                 <span>Terjual</span> <span>30+</span>
                 •
@@ -18,24 +19,24 @@
                     diskusi <span class="text-slate-500">(10)</span>
                 </span>
             </div>
-            <h3 class="text-xl font-bold dark:text-white">Rp20.000,00</h3>
+            <h3 class="hidden md:inline-block text-xl font-bold dark:text-white">Rp20.000,00</h3>
         </div>
-        <ul class="flex flex-wrap text-sm font-medium text-center text-gray-500 border-b  rounded-t-lg " id="defaultTab"
+        <ul class="flex flex-wrap text-sm font-medium text-center text-gray-500 border-b  rounded-t-lg" id="defaultTab"
             data-tabs-toggle="#defaultTabContent" role="tablist">
             <li class="me-2">
-                <button id="detail-tab" data-tabs-target="#detail" type="button" role="tab" aria-controls="about"
+                <button @click="showAbout = true, showServices = false" id="detail-tab" data-tabs-target="#detail" type="button" role="tab" aria-controls="about"
                     aria-selected="true"
                     class="inline-block p-4 text-cyan-600 rounded-ss-lg hover:bg-gray-100  dark:hover:bg-gray-700 dark:text-cyan-500">Detail</button>
             </li>
             <li class="me-2">
-                <button id="services-tab" data-tabs-target="#services" type="button" role="tab"
+                <button @click="showAbout = false, showServices = true" id="services-tab" data-tabs-target="#services" type="button" role="tab"
                     aria-controls="services" aria-selected="false"
                     class="inline-block p-4 hover:text-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-gray-300">Info
                     Penting</button>
             </li>
         </ul>
         <div id="defaultTabContent">
-            <div class="hidden p-4  rounded-lg md:p-8 " id="detail" role="tabpanel" aria-labelledby="detail-tab">
+            <div x-show="showAbout" class="p-4  rounded-lg md:p-8 " id="detail" role="tabpanel" aria-labelledby="detail-tab">
                 <div>
                     <h1>Kondisi: Baru</h1>
                     <h1>Min. Pemesanan: 1 Buah</h1>
@@ -57,7 +58,7 @@
                     <h1>putih</h1>
                 </div>
             </div>
-            <div class="hidden p-4  rounded-lg md:p-8 " id="services" role="tabpanel" aria-labelledby="services-tab">
+            <div x-show="showServices" class="p-4  rounded-lg md:p-8 " id="services" role="tabpanel" aria-labelledby="services-tab">
                 <h2 class="mb-5 text-2xl font-extrabold tracking-tight text-gray-900 dark:text-white">We invest in the
                     world’s potential</h2>
                 <!-- List -->

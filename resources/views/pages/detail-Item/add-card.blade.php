@@ -1,84 +1,10 @@
-<div class="fixed  border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+<div class="fixed w-80 border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
     <div class="px-5 py-5">
         <span>
             <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">Atur Jumlah dan Catatan</h5>
         </span>
         <hr class="h-px my-3 bg-gray-200 border-0 dark:bg-gray-700">
-        <div class="my-2">
-            <h3 class="mb-2 text-sm font-medium text-gray-900 dark:text-white">Ukuran</h3>
-            <ul class="flex flex-wrap w-full gap-2">
-                <li>
-                    <input type="radio" id="xl" name="ukuran" value="xl" class="hidden peer" required />
-                    <label for="xl"
-                        class="inline-flex items-center justify-between w-full p-2 text-gray-500  border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-cyan-500 peer-checked:border-cyan-600 peer-checked:text-cyan-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
-                        <div class="block">
-                            <div class="w-full text-sm font-semibold">XL</div>
-                        </div>
-                    </label>
-                </li>
-                <li>
-                    <input type="radio" id="l" name="ukuran" value="l" class="hidden peer">
-                    <label for="l"
-                        class="inline-flex items-center justify-between w-full p-2 text-gray-500  border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-cyan-500 peer-checked:border-cyan-600 peer-checked:text-cyan-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
-                        <div class="block">
-                            <div class="w-full text-sm font-semibold">L</div>
-                        </div>
-                    </label>
-                </li>
-                <li>
-                    <input type="radio" id="m" name="ukuran" value="m" class="hidden peer">
-                    <label for="m"
-                        class="inline-flex items-center justify-between w-full p-2 text-gray-500  border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-cyan-500 peer-checked:border-cyan-600 peer-checked:text-cyan-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
-                        <div class="block">
-                            <div class="w-full text-sm font-semibold">M</div>
-                        </div>
-                    </label>
-                </li>
-                <li>
-                    <input type="radio" id="s" name="ukuran" value="s" class="hidden peer">
-                    <label for="s"
-                        class="inline-flex items-center justify-between w-full p-2 text-gray-500  border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-cyan-500 peer-checked:border-cyan-600 peer-checked:text-cyan-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
-                        <div class="block">
-                            <div class="w-full text-sm font-semibold">S</div>
-                        </div>
-                    </label>
-                </li>
-            </ul>
-
-        </div>
-        <div class="my-2">
-            <h3 class="mb-2 text-sm font-medium text-gray-900 dark:text-white">warna</h3>
-            <ul class="flex flex-wrap w-full gap-2">
-                <li>
-                    <input type="radio" id="putih" name="warna" value="putih" class="hidden peer" required />
-                    <label for="putih"
-                        class="inline-flex items-center justify-between w-full p-2 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-cyan-500 peer-checked:border-cyan-600 peer-checked:text-cyan-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
-                        <div class="block">
-                            <div class="w-full text-sm font-semibold">putih</div>
-                        </div>
-                    </label>
-                </li>
-                <li>
-                    <input type="radio" id="merah" name="warna" value="merah" class="hidden peer">
-                    <label for="merah"
-                        class="inline-flex items-center justify-between w-full p-2 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-cyan-500 peer-checked:border-cyan-600 peer-checked:text-cyan-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
-                        <div class="block">
-                            <div class="w-full text-sm font-semibold">merah</div>
-                        </div>
-                    </label>
-                </li>
-                <li>
-                    <input type="radio" id="hitam" name="warna" value="hitam" class="hidden peer">
-                    <label for="hitam"
-                        class="inline-flex items-center justify-between w-full p-2 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
-                        <div class="block">
-                            <div class="w-full text-sm font-semibold">hitam</div>
-                        </div>
-                    </label>
-                </li>
-            </ul>
-
-        </div>
+        @include('pages.detail-Item.varian-product')
         <hr class="h-px my-3 bg-gray-200 border-0 dark:bg-gray-700">
         <div class="grid grid-cols-2 gap-2 my-2">
             <div class="">
@@ -128,9 +54,9 @@
                 placeholder="Tulis Catatanmu disini..."></textarea>
         </div>
         <div class="items-center justify-between my-3">
-          <div class="">subtotal</div>
+            <div class="">subtotal</div>
             <div class="text-xs md:text-lg font-bold text-gray-900 dark:text-white w-full mb-2">Rp 1.000.000,00</div>
-            
+
             <button type="button"
                 class="w-full text-white bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">
                 Add to cart
@@ -139,6 +65,33 @@
                 class="w-full text-cyan-700 hover:text-white border border-cyan-700 hover:bg-cyan-800 focus:ring-4 focus:outline-none focus:ring-cyan-300 font-medium rounded-lg md:text-sm text-xs md:px-5 px-3 md:py-2.5 py-1 text-center md:me-2 me-1 md:mb-2 mb-1 dark:border-cyan-500 dark:text-cyan-500 dark:hover:text-white dark:hover:bg-cyan-500 dark:focus:ring-cyan-800">
                 Buy
             </button>
+        </div>
+
+        <div class="w-full text-center">
+            <div class="inline-flex rounded-md shadow-sm" role="group">
+                <button type="button"
+                    class="inline-flex items-center px-4 py-2 text-sm font-medium text-cyan-900 bg-transparent border border-cyan-900 rounded-s-lg hover:bg-cyan-900 hover:text-white focus:z-10 focus:ring-2 focus:ring-cyan-500 focus:bg-cyan-900 focus:text-white dark:border-white dark:text-white dark:hover:text-white dark:hover:bg-cyan-700 dark:focus:bg-cyan-700">
+                    <span class="material-symbols-outlined text-sm mr-1 pt-0.5">
+                        chat
+                    </span>
+                    Chat
+                </button>
+                <button type="button"
+                    class="inline-flex items-center px-4 py-2 text-sm font-medium text-cyan-900 bg-transparent border-t border-b border-cyan-900 hover:bg-cyan-900 hover:text-white focus:z-10 focus:ring-2 focus:ring-cyan-500 focus:bg-cyan-900 focus:text-white dark:border-white dark:text-white dark:hover:text-white dark:hover:bg-cyan-700 dark:focus:bg-cyan-700">
+                    <span class="material-symbols-outlined text-sm mr-1 pt-0.5 ">
+                        favorite
+                    </span>
+                    Wishlist
+                </button>
+                <button type="button"
+                    class="inline-flex items-center px-4 py-2 text-sm font-medium text-cyan-900 bg-transparent border border-cyan-900 rounded-e-lg hover:bg-cyan-900 hover:text-white focus:z-10 focus:ring-2 focus:ring-cyan-500 focus:bg-cyan-900 focus:text-white dark:border-white dark:text-white dark:hover:text-white dark:hover:bg-cyan-700 dark:focus:bg-cyan-700">
+                    <span class="material-symbols-outlined text-sm mr-1 pt-0.5 ">
+                        share
+                    </span>
+                    Share
+                </button>
+            </div>
+
         </div>
     </div>
 </div>
