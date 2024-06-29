@@ -1,4 +1,4 @@
-<div id="animation-carousel" class="relative w-full" data-carousel="static">
+<div id="animation-carousel" class="relative w-full my-5" data-carousel="static">
     <!-- Carousel wrapper -->
     <div class="relative h-28 overflow-hidden rounded-lg md:h-44">
         <!-- Item 1 -->
@@ -9,7 +9,7 @@
                 <div
                     class="m-2 p-2 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                     <div class="w-32 flex flex-col items-center pb-10 p-3">
-                        <img class="md:w-12 md:h-12 mb-3 rounded-full shadow-lg"
+                        <img class="md:w-12 md:h-12 h-8 w-8 mb-3 rounded-full shadow-lg"
                             src="{{ asset('img/noteBook.jpg') }}" alt="Bonnie image" />
                         <h5 class="text-md font-medium text-gray-900 dark:text-white">Bonnie Green</h5>
                         {{-- <span class="mt-1 text-sm text-gray-500 dark:text-gray-400">Visual Designer</span> --}}
@@ -27,7 +27,7 @@
                 <div
                     class="m-2 p-2 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                     <div class="w-32 flex flex-col items-center pb-10 p-3">
-                        <img class="md:w-12 md:h-12 mb-3 rounded-full shadow-lg"
+                        <img class="md:w-12 md:h-12 h-8 w-8 mb-3 rounded-full shadow-lg"
                             src="{{ asset('img/noteBook.jpg') }}" alt="Bonnie image" />
                         <h5 class="text-md font-medium text-gray-900 dark:text-white">Bonnie Green</h5>
                         {{-- <span class="mt-1 text-sm text-gray-500 dark:text-gray-400">Visual Designer</span> --}}

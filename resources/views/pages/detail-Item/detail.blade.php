@@ -100,7 +100,7 @@
         </div>
     </div>
     {{-- toko --}}
-    <div class="py-3 sm:py-4">
+    <div class="p-3 sm:p-4">
         <div class="flex items-start">
             <div class="flex-shrink-0 mt-2">
                 <img class="w-8 h-8 rounded-full" src="{{ asset('img/noteBook.jpg') }}" alt="Neil image">

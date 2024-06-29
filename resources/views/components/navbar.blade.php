@@ -6,7 +6,7 @@
             </span>
 
             {{-- search mobile --}}
-            <div class="relative md:hidden mx-10">
+            <div class="relative md:hidden mx-10 w-40">
                 <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
                     <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
                         xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
@@ -39,6 +39,24 @@
                     placeholder="Search...">
             </div>
             {{-- endsearch --}}
+            {{-- cart --}}
+            <button type="button"
+                class="flex text-sm rounded-full md:px-5"
+                id="user-menu-button" aria-expanded="false" data-dropdown-toggle="cart-menu"
+                data-dropdown-placement="bottom">
+                <span class="material-symbols-outlined">
+                    shopping_cart
+                </span>
+            </button>
+            <!-- Dropdown menu -->
+            <div class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600"
+                id="cart-menu">
+
+                {{-- quick cart  --}}
+                @include('components.quick-cart')
+            </div>
+
+            {{-- profile --}}
             <button type="button"
                 class="flex text-sm bg-gray-800 rounded-full md:me-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
                 id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown"

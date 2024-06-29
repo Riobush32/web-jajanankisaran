@@ -1,4 +1,22 @@
-<div class="fixed w-80 border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+<style>
+    .sty-scrollbar{
+        scrollbar-width:normal;
+    }
+    .sty-scrollbar::-webkit-scrollbar{
+        width: 10px;
+    }
+    .sty-scrollbar::-webkit-scrollbar-thumb{
+        background-color: #06b6d4;
+        border-radius:10px;
+    }
+    .sty-scrollbar::-webkit-scrollbar-track{
+        box-shadow: inset 0px 0px 3px grey;
+        border-radius: 10px;
+        margin:10px
+    }
+    
+</style>
+<div class="sty-scrollbar fixed w-80 max-h-[75vh] border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 overflow-auto">
     <div class="px-5 py-5">
         <span>
             <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">Atur Jumlah dan Catatan</h5>
