@@ -26,7 +26,7 @@
                             <p class="font-bold text-sm">Rp43.000,00</p>
                             <div class="my-2 grid grid-cols-2">
                                 <div class="grid grid-cols-2 text-slate-400">
-                                    <button @click="catatan = !catatan" class="">
+                                    <button @click="catatan = !catatan" @click.outside="catatan = false" x-bind:class="catatan ? 'text-slate-900' : 'text-slate-400'">
                                         <span class="material-symbols-outlined">
                                             contract_edit
                                         </span>
@@ -68,7 +68,7 @@
                     </div>
                 </div>
             </div>
-            <div x-show="catatan" x-transition class="">
+            <div x-show="catatan" x-transition.scale.origin.top.duration.500ms class="">
 
                 <form>
                     <div class="flex items-center px-3 py-2 rounded-lg">
