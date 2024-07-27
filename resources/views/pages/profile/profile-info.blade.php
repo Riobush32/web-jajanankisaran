@@ -1,8 +1,8 @@
 <x-layouts>
 
-    <div class="flex gap-4">
+    <div class="md:flex gap-4">
         {{-- left  --}}
-        <div class="w-1/4 text-center bg-white rounded-xl p-2">
+        <div class="w-full md:w-1/4 text-center bg-white rounded-xl p-2">
             <div class="w-full flex justify-center items-center">
                 <div class="">
                     <img src="{{ asset('avatar/person1.jpeg') }}" alt="avatar">
@@ -18,39 +18,65 @@
         </div>
 
         {{-- right  --}}
-        <div class="w-3/4 bg-white rounded-xl ">
-            <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
-                <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+        <div class="w-full md:w-3/4 bg-white rounded-xl ">
+            <div class="text-slate-600 relative overflow-x-auto shadow-md sm:rounded-lg">
+                <table class="text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
                     <caption
                         class="p-5 text-lg font-semibold text-left rtl:text-right text-gray-900 bg-white dark:text-white dark:bg-gray-800">
                         Biodata
                     </caption>
                     <tbody>
-                        <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                        <tr class="bg-white dark:bg-gray-800 dark:border-gray-700">
                             <th scope="row"
                                 class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                 Nama
                             </th>
                             <td class="px-6 py-4">
-                                Rio Sofhaniel Bush
+                                Rio Sofhaniel Bush <a class="text-cyan-500 cursor-pointer">Ubah</a>
                             </td>
                         </tr>
-                        <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                        <tr class="bg-white dark:bg-gray-800 dark:border-gray-700">
                             <th scope="row"
                                 class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                 Tanggal Lahir
                             </th>
                             <td class="px-6 py-4">
-                                30 April 2001
+                                30 April 2001 <a class="text-cyan-500">Ubah</a>
                             </td>
                         </tr>
-                        <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                        <tr class="bg-white dark:bg-gray-800 dark:border-gray-700">
                             <th scope="row"
                                 class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                 Jenis Kelamin
                             </th>
                             <td class="px-6 py-4">
-                                Laki-laki
+                                Laki-laki <a class="text-cyan-500">Ubah</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+                    <caption
+                        class="p-5 text-lg font-semibold text-left rtl:text-right text-gray-900 bg-white dark:text-white dark:bg-gray-800">
+                        Kontak
+                    </caption>
+                    <tbody>
+                        <tr class="bg-white dark:bg-gray-800 dark:border-gray-700">
+                            <th scope="row"
+                                class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                Email
+                            </th>
+                            <td class="px-6 py-4">
+                                riobush32@gmail.com <a class="text-cyan-500">Ubah</a>
+                            </td>
+                        </tr>
+                        <tr class="bg-white dark:bg-gray-800 dark:border-gray-700">
+                            <th scope="row"
+                                class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                Nomor Hp
+                            </th>
+                            <td class="px-6 py-4">
+                                081362172097 <a class="text-cyan-500">Ubah</a>
                             </td>
                         </tr>
                     </tbody>

@@ -12,3 +12,7 @@ Route::get('/details', [DetailItemController::class,'index'])->name('details');
 Route::get('/profile/info', function () {
     return view('pages.profile.profile-info');
 });
+
+Route::get('/product/add', function () {
+    return view('pages.product.add');
+});
