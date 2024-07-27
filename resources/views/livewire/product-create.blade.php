@@ -14,7 +14,7 @@
         </div>
     @endif
     <form wire:submit.prevent="store">
-        <div class="grid gap-6 mb-6 md:grid-cols-2">
+        <div class="grid gap-6 mb-6 md:grid-cols-3">
             <div>
                 <label for="product_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Product
                     name</label>

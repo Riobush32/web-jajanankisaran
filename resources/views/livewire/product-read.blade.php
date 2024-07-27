@@ -1,6 +1,6 @@
 
 
-<div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+<div class="relative overflow-x-auto shadow-md sm:rounded-lg" id="paginated-product">
     <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
         <caption class="p-5 text-lg font-semibold text-left rtl:text-right text-gray-900 bg-white dark:text-white dark:bg-gray-800">
             Our products
@@ -35,13 +35,13 @@
                     Rp {{ number_format($row->price,2,',','.') }}
                 </td>
                 <td class="px-6 py-4 text-right">
-                    <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">detail</a>
+                    <a href="#paginated-product" x-on:click="detail = true" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">detail</a>
                 </td>
             </tr>
             @endforeach
         </tbody>
     </table>
     <div class="p-3">
-        {{ $productData->links() }}
+        {{ $productData->links(data: ['scrollTo' => '#paginated-product']) }}
     </div>
 </div>
