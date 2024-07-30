@@ -1,5 +1,5 @@
-t<x-layouts>
-    <livewire:product-create />
+<x-layouts>
+    
     <div class="inline-flex items-center justify-center w-full">
         <hr class="w-64 h-1 my-8 bg-gray-200 border-0 rounded dark:bg-gray-700">
         <div class="absolute px-4 -translate-x-1/2 bg-white left-1/2 dark:bg-gray-900">
@@ -10,10 +10,12 @@ t<x-layouts>
             </svg>
         </div>
     </div>
-    <div class="flex gap-4 items-start" x-data="{ detail: false }">
+    <div class="flex gap-4 items-start" x-data="{ detail: false, add: false }">
 
         <livewire:product-read />
-            <livewire:product-information />
+        {{-- @livewire('product-information', ['product' => ['id' => '2', 'product_name' => 'pisang goreng', 'category'=>'makanan','price'=>'20', 'description' =>'hello']]) --}}
+        <livewire:product-information />
+        <livewire:product-create />
     </div>
 
 </x-layouts>

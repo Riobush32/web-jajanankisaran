@@ -1,31 +1,63 @@
 <div class="w-1/2 block relative p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
-    x-show="detail">
+    x-transition:enter="transition ease-out duration-300 delay-700" x-transition:enter-start="opacity-0 scale-90"
+    x-transition:enter-end="opacity-100 scale-100" x-transition:leave="transition ease-in duration-300"
+    x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-90" x-show="detail"
+    x-data="{ editing: false }">
+    
     <div class="px-4 sm:px-0">
-        <h3 class="text-base font-semibold leading-7 text-gray-900">Product Information</h3>
-        <p class="mt-1 max-w-2xl text-sm leading-6 text-gray-500">Detail information of product.</p>
+        <h3 class="text-base font-semibold leading-7 text-gray-900">Product Information {{$product_name}}</h3>
+        <div class="">
+            <p class="mt-1 max-w-2xl text-sm leading-6 text-gray-500">Detail information of product.</p>
+        </div>
+        <div class="mt-5">
+            <label class="inline-flex items-center me-5 cursor-pointer">
+                <input type="checkbox" value="" class="sr-only peer" x-on:click="editing = !editing">
+                <div
+                    class="relative w-9 h-5 bg-gray-200 rounded-full peer dark:bg-gray-700 peer-focus:ring-4 peer-focus:ring-teal-300 dark:peer-focus:ring-teal-800 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all dark:border-gray-600 peer-checked:bg-teal-600">
+                </div>
+                <span class="ms-3 text-xs font-medium text-gray-900 dark:text-gray-300">Edit mode</span>
+            </label>
+        </div>
+
     </div>
     <div class="mt-6 border-t border-gray-100">
         <dl class="divide-y divide-gray-100">
-            <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-                <dt class="text-sm font-medium leading-6 text-gray-900">Product Name</dt>
-                <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">Margot Foster</dd>
-            </div>
-            <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-                <dt class="text-sm font-medium leading-6 text-gray-900">Category</dt>
-                <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">Backend Developer</dd>
-            </div>
-            <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-                <dt class="text-sm font-medium leading-6 text-gray-900">Price</dt>
-                <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">margotfoster@example.com
-                </dd>
-            </div>
-            <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-                <dt class="text-sm font-medium leading-6 text-gray-900">Description</dt>
-                <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">Fugiat ipsum ipsum
-                    deserunt culpa aute sint do nostrud anim incididunt cillum culpa consequat. Excepteur qui
-                    ipsum aliquip consequat sint. Sit id mollit nulla mollit nostrud in ea officia proident.
-                    Irure nostrud pariatur mollit ad adipisicing reprehenderit deserunt qui eu.</dd>
-            </div>
+            <form>
+                <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+                    <dt class="text-sm font-medium leading-6 text-gray-900">Product Name {{$product_name}}</dt>
+                    <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
+                        <input x-bind:disabled="!editing" type="text" 
+                            value="{{$product_name}}"
+                            class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-teal-500 focus:outline-none focus:ring-0 focus:border-teal-600 peer"
+                            placeholder=" " required />
+                    </dd>
+                </div>
+                <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0 items-center">
+                    <dt class="text-sm font-medium leading-6 text-gray-900">Category</dt>
+                    <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
+                        <input x-bind:disabled="!editing" type="text" name="caregory" id="caregory"
+                            value="{{$category}}"
+                            class="block py-2.5 px-0 w-full text-sm leading-6 text-gray-700 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-teal-500 focus:outline-none focus:ring-0 focus:border-teal-600 peer"
+                            required />
+                    </dd>
+                </div>
+                <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+                    <dt class="text-sm font-medium leading-6 text-gray-900">Price</dt>
+                    <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
+                        <input x-bind:disabled="!editing" type="text" name="price" id="price"
+                            value="{{$price}}"
+                            class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-teal-500 focus:outline-none focus:ring-0 focus:border-teal-600 peer"
+                            placeholder=" " required />
+                    </dd>
+                </div>
+                <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+                    <dt class="text-sm font-medium leading-6 text-gray-900">Description</dt>
+                    <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
+                        <input id="x" type="hidden" name="content"  value="{{$description}}">
+                        <trix-editor input="x"  wire:model="description"></trix-editor>
+                    </dd>
+                </div>
+            </form>
             <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
                 <dt class="text-sm font-medium leading-6 text-gray-900">Attachments</dt>
                 <dd class="mt-2 text-sm text-gray-900 sm:col-span-2 sm:mt-0">
@@ -44,7 +76,7 @@
                                 </div>
                             </div>
                             <div class="ml-4 flex-shrink-0">
-                                <a href="#" class="font-medium text-indigo-600 hover:text-indigo-500">Download</a>
+                                <a href="#" class="font-medium text-teal-600 hover:text-teal-500">Download</a>
                             </div>
                         </li>
                         <li class="flex items-center justify-between py-4 pl-4 pr-5 text-sm leading-6">
@@ -61,7 +93,7 @@
                                 </div>
                             </div>
                             <div class="ml-4 flex-shrink-0">
-                                <a href="#" class="font-medium text-indigo-600 hover:text-indigo-500">Download</a>
+                                <a href="#" class="font-medium text-teal-600 hover:text-teal-500">Download</a>
                             </div>
                         </li>
                     </ul>

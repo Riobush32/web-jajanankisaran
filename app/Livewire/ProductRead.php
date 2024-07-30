@@ -12,6 +12,8 @@ class ProductRead extends Component
 {
     use WithPagination, WithoutUrlPagination;
 
+    public $formVisible = false;
+
     #[On('product-create')]
     public function updateProductList($product)
     {
@@ -24,5 +26,11 @@ class ProductRead extends Component
         return view('livewire.product-read',[
             'productData' => $data
         ]);
+    }
+
+    public function getProduct($id)
+    {
+        $this->formVisible = true;
+        $this->dispatch('product-row', productId: $id); // Emit event correctly
     }
 }
