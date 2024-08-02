@@ -10,12 +10,6 @@
             </svg>
         </div>
     </div>
-    <div class="flex gap-4 items-start" x-data="{ detail: false, add: false }">
 
-        <livewire:product-read />
-        {{-- @livewire('product-information', ['product' => ['id' => '2', 'product_name' => 'pisang goreng', 'category'=>'makanan','price'=>'20', 'description' =>'hello']]) --}}
-        <livewire:product-information />
-        <livewire:product-create />
-    </div>
-
+    <livewire:product-list/>
 </x-layouts>
