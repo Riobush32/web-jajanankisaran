@@ -31,7 +31,7 @@
                         </label>
                     </div>
                 </div>
-                <div class="mt-6 border-t border-gray-100">
+                <div class="mt-6 border-t border-gray-100" x-data="{ mainImage:false }">
                     <dl class="divide-y divide-gray-100">
 
                         {{-- form product data  --}}
@@ -48,7 +48,7 @@
                             </div>
                         </div>
 
-
+                        @include('pages.product.add-main-image')
                         {{-- galeri --}}
                         @include('pages.product.galery')
                         {{-- endgallery --}}

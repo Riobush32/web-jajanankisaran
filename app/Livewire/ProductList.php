@@ -61,7 +61,7 @@ class ProductList extends Component
     }
 
     public function storeProduct(){
-        // $this->validate();
+        $this->validate();
         Product::create([
             'product_name' => $this->product_name,
             'category' => $this->category,
